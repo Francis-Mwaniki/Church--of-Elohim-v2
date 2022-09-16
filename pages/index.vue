@@ -1,5 +1,11 @@
 <template>
-  <div class="container mx-auto bg-gray-300 p-8">
-    <h1 class="font-bold text-gray-600 text-lg">Hello, Tailwind 3!</h1>
-  </div>
+  <main><Hero1 /></main>
 </template>
+
+<script>
+import Hero1 from "~~/components/Hero.vue";
+
+export default {
+  components: { Hero1 },
+};
+</script>
