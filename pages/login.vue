@@ -2,8 +2,6 @@
   <main>
     <Login1 />
     <VerticalNav1 />
-    <div class="text-black">{{ store.count }}</div>
-    <div class="text-black">{{ store.doubleCounter }}</div>
   </main>
 </template>
 
