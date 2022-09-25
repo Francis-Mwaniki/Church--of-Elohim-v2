@@ -7,8 +7,8 @@
       </div>
       <div class="flex mt-8 flex-col md:flex-row md:justify-between">
         <p class="w-full md:w-2/3 text-gray-200">
-          To ensure that all Wikipedia content is verifiable, anyone may question an
-          uncited claim. If your work has been tagged.
+          All song are scriptural inspiration Praising Elohim The creator of Heaven And
+          Earth.
         </p>
         <div class="w-44 pt-6 md:pt-0">
           <a
@@ -65,7 +65,7 @@
         </div>
         <hr class="border-gray-600" />
         <p class="w-full text-center my-1 text-gray-300">
-          Copyright © 2022 Church of Elohim.Kenya
+          Copyright © 2022 Ephesus Sardis.Kenya
         </p>
       </div>
     </div>
