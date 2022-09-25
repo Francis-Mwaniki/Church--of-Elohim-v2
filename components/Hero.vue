@@ -180,7 +180,7 @@
                   >
                 </div>
                 <a
-                  href="#"
+                  href="/login"
                   class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100"
                   ><span
                     ><font-awesome-icon
