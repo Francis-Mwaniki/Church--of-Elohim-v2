@@ -4,7 +4,7 @@
   <section class="bg-gray-900 py-7 px-12">
     <VerticalNav1 />
     <h1
-      class="md:text-3xl text-xl font-mono text-white flex justify-center items-center mx-auto uppercase p-1"
+      class="md:text-3xl text-sm font-mono text-white flex justify-center items-center mx-auto uppercase p-1"
     >
       Messianic Gospel Artist.
     </h1>
