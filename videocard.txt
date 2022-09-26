@@ -40,3 +40,52 @@
         </div>
       </section>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    video embeds
+1
+
+    <iframe width="1351" height="503" src="https://www.youtube.com/embed/Cgj3yAsrlBo" title="LATEST SABBATH SONG UPENDO TELE_BY EPHESUS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+2
+
+
+<iframe width="1351" height="503" src="https://www.youtube.com/embed/Zr9lUG-3_cc" title="YERUSALEMU By EPHESUS SARDIS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+3
+<iframe width="1351" height="503" src="https://www.youtube.com/embed/J05X_RK_D6g" title="LATEST Gospel song FuRAHA TELE BY EPHESUS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+4
+
+<iframe width="1351" height="503" src="https://www.youtube.com/embed/oE-iMg1SpPI" title="Latest swahili gospel NICODEMU BY EPHESUS Sardis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+5
+
+<iframe width="1351" height="503" src="https://www.youtube.com/embed/lfGOgUWzQ5U" title="NI HAKi BY EPHESUS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
+
+
+
+
+
+<span class="text-slate-200">I'm Artist Ephesus.</span>
+<span class="text-slate-200"> </span>
+<span class="text-slate-200"> </span>
+<span class="text-slate-200"> </span>

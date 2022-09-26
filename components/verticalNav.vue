@@ -6,7 +6,7 @@
     <!-- container -->
 
     <aside
-      class="flex flex-col items-center bg-transparent text-gray-700 shadow sm:h-auto h-screen rounded-full mx-auto"
+      class="flex flex-col items-center bg-transparent text-slate-900 shadow sm:h-auto h-screen rounded-full mx-auto"
     >
       <!-- Side Nav Bar-->
 
@@ -217,7 +217,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  ssr: false,
+};
 </script>
 
 <style></style>

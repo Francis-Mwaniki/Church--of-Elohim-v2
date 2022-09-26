@@ -239,15 +239,16 @@
         />
       </div>
     </div>
+    <SharedHero />
     <Dropdown1 />
   </main>
 </template>
 
 <script>
 import Dropdown1 from "./Dropdown.vue";
-
+import SharedHeroVue from "./SharedHero.vue";
 export default {
-  components: { Dropdown1 },
+  components: { SharedHeroVue, Dropdown1 },
   data() {
     return {};
   },

@@ -1,4 +1,12 @@
 {
-  "cSpell.words": ["catoon", "fontawesome", "fortawesome", "nuxt", "pinia"],
+  "cSpell.words": [
+    "Accordation",
+    "catoon",
+    "flowbite",
+    "fontawesome",
+    "fortawesome",
+    "nuxt",
+    "pinia"
+  ],
   "vue3snippets.enable-compile-vue-file-on-did-save-code": true
 }

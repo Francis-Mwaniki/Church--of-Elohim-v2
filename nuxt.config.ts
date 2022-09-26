@@ -12,8 +12,13 @@ export default defineNuxtConfig({
       },
     },
   },
+  runtimeConfig: {
+    API_KEY: process.env.API_KEY,
+  },
+
   css: [
     "~/assets/css/main.css",
+    "~/assets/css/global.css",
     "@fortawesome/fontawesome-svg-core/styles.css",
   ],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -24,7 +29,13 @@ export default defineNuxtConfig({
     // https://go.nuxtjs.dev/axios
     "@pinia/nuxt",
   ],
+  plugins: ["@/plugins/flowbite.client.js"],
+  loading: "~/components/loadingBar.vue",
+  loadingIndicator: {
+    name: "circle",
+    color: "#3B8070",
+    background: "white",
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-
 });

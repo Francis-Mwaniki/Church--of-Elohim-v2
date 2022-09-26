@@ -1,5 +1,6 @@
 <template>
   <main>
+    <LoadingBar1 />
     <slot />
     <Footer1 />
   </main>
@@ -7,8 +8,27 @@
 
 <script>
 import Footer1 from "~~/components/Footer.vue";
-
-export default { components: { Footer1 } };
+import LoadingBar1 from "~~/components/loadingBar.vue";
+export default {
+  components: { Footer1, LoadingBar1 },
+  data: () => ({
+    loading: false,
+  }),
+  methods: {
+    start() {
+      this.loading = true;
+    },
+    finish() {
+      this.loading = false;
+    },
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start();
+      setTimeout(() => this.$nuxt.$loading.finish(), 500);
+    });
+  },
+};
 </script>
 
 <style></style>

@@ -10,10 +10,9 @@
         Ephesus sardis
       </p>
       <small class="font-medium font-mono text-white p-3 text-lg">
-        Caffé latte and flat white are definitely the most ordered espresso based drinks
-        in cafés around the world but what are they really? Have you ever wondered the
-        difference between caffé latte vs. flat white? Let's see what makes caffé latte
-        and flat white different from each other!
+        Ephesus Sardis is A kenyan Messianic Musician.Located in Nakuru County, Head of
+        Southern Rift Messianic Youth.Enjoy the songs below.Spread love.Message of Yahshua
+        Messiah.Subscribe.share & Like!
       </small>
       <a
         href="https://www.youtube.com/channel/UCFb034q690fN9Ti_0ch-yAQ"
@@ -36,7 +35,7 @@
             ></path>
             <path fill="#FFF" d="M20 31L20 17 32 24z"></path></svg
         ></span>
-        <span class="text-white"> Youtube channel</span>
+        <span class="text-white s hover:underline"> Youtube channel</span>
       </a>
     </div>
   </main>
