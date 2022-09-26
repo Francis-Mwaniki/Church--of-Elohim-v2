@@ -29,7 +29,7 @@ export default defineNuxtConfig({
     // https://go.nuxtjs.dev/axios
     "@pinia/nuxt",
   ],
-  plugins: ["@/plugins/flowbite.client.js"],
+  plugins: [],
   loading: "~/components/loadingBar.vue",
   loadingIndicator: {
     name: "circle",

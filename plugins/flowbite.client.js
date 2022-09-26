@@ -1,5 +1,4 @@
-import flowbite from "flowbite";
-
-export default defineNuxtPlugin((nuxtApp) => {
+/* export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.use(flowbite);
 });
+ */

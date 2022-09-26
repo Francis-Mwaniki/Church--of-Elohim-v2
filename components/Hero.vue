@@ -240,15 +240,15 @@
       </div>
     </div>
     <SharedHero />
-    <Dropdown1 />
+    <!--     <Dropdown1 /> -->
   </main>
 </template>
 
 <script>
-import Dropdown1 from "./Dropdown.vue";
+/* import Dropdown1 from "./Dropdown.vue"; */
 import SharedHeroVue from "./SharedHero.vue";
 export default {
-  components: { SharedHeroVue, Dropdown1 },
+  components: { SharedHeroVue },
   data() {
     return {};
   },
