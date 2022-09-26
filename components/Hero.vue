@@ -117,22 +117,36 @@
               <div
                 class="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-5"
               >
-                <div class="flex items-center justify-between px-5 pt-4">
+                <div class="flex items-center justify-between px-5 pt-4 pb-2">
                   <div>
-                    <img
-                      class="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                      alt=""
-                    />
+                    <img class="h-8 w-auto" src="../assets/images/catoon.png" alt="" />
                   </div>
                   <div class="-mr-2">
+                    <!--  //TODO -->
                     <button
                       type="button"
                       class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                      @click="toggleMode"
                     >
                       <span class="sr-only">Close main menu</span>
-                      <!-- Heroicon name: outline/x-mark -->
+                      <!-- Menu icon -->
                       <svg
+                        v-if="!mode"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5 fill-black"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <!-- Heroicon name: outline/x-mark -->
+                      <!-- //todo close -->
+                      <svg
+                        v-else
                         class="h-6 w-6"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -150,7 +164,7 @@
                     </button>
                   </div>
                 </div>
-                <div class="space-y-1 px-2 pt-2 pb-3">
+                <div class="space-y-1 px-2 pt-2 pb-3" v-show="mode">
                   <a
                     href="#"
                     class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900"
@@ -180,6 +194,7 @@
                   >
                 </div>
                 <a
+                  v-show="mode"
                   href="/login"
                   class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100"
                   ><span
@@ -250,9 +265,15 @@ import SharedHeroVue from "./SharedHero.vue";
 export default {
   components: { SharedHeroVue },
   data() {
-    return {};
+    return {
+      mode: false,
+    };
   },
-  methods: {},
+  methods: {
+    toggleMode() {
+      this.mode = !this.mode;
+    },
+  },
 };
 </script>
 
