@@ -1,12 +1,10 @@
 <template>
-  <main>
-    <div
-      class="flex justify-center items-center flex-row flex-wrap gap-y-3 max-w-screen-lg mx-auto gap-1 m-2 rounded-lg"
-      v-for="vid in videos"
-    >
+  <main class="flex md:flex-row flex-col flex-wrap">
+    <div class="gap-y-3 mx-auto gap-1 m-2 rounded-lg" v-for="vid in videos">
       <iframe
-        width="1351"
-        height="503"
+        class="max-w-lg"
+        width="400"
+        height="290"
         :src="`https://www.youtube.com/embed/${vid.videoId}`"
         title="LATEST SABBATH SONG UPENDO TELE_BY EPHESUS"
         frameborder="0"
