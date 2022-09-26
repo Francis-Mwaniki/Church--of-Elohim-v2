@@ -5,11 +5,11 @@
     >
       <img src="../assets/images/ephesus.jpg" class="rounded-full h-24 w-24" alt="" />
       <!-- Title -->
-      <p class="text-lg mb-4 font-bold leading-relaxed text-gray-300">
+      <p class="text-lg mb-4 font-bold leading-relaxed text-gray-900">
         <!-- Post Title -->
         Ephesus sardis
       </p>
-      <small class="font-medium font-mono text-white p-3 text-lg">
+      <small class="font-medium font-mono text-slate-900 p-3 text-lg">
         Ephesus Sardis is A kenyan Messianic Musician.Located in Nakuru County, Head of
         Southern Rift Messianic Youth.Enjoy the songs below.Spread love.Message of Yahshua
         Messiah.Subscribe.share & Like!
@@ -35,7 +35,7 @@
             ></path>
             <path fill="#FFF" d="M20 31L20 17 32 24z"></path></svg
         ></span>
-        <span class="text-white s hover:underline"> Youtube channel</span>
+        <span class="text-slate-900 hover:underline"> Youtube channel</span>
       </a>
     </div>
   </main>

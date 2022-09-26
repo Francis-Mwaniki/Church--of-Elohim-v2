@@ -1,7 +1,7 @@
 <style></style>
 <!-- Card List Section -->
 <template>
-  <section class="bg-gray-900 py-7 px-12">
+  <section class="bg-gray-100 py-7 px-12">
     <VerticalNav1 />
     <h1
       class="md:text-3xl text-sm font-mono text-white flex justify-center items-center mx-auto uppercase p-1"
