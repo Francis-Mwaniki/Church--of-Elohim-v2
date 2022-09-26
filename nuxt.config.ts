@@ -29,7 +29,6 @@ export default defineNuxtConfig({
     // https://go.nuxtjs.dev/axios
     "@pinia/nuxt",
   ],
-  plugins: [],
   loading: "~/components/loadingBar.vue",
   loadingIndicator: {
     name: "circle",
