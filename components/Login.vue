@@ -8,53 +8,49 @@
           alt="Your Company"
         />
         <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
-          Login in to your account
+          Sign up into your account
         </h2>
         <p class="mt-2 text-center text-sm text-gray-600">
-          And
           <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500"
             >Welcome</a
           >
         </p>
       </div>
-      <form class="mt-8 space-y-6" action="#" method="POST">
-        <input type="hidden" name="remember" value="true" />
+      <Form class="mt-8 space-y-6" @submit="onSubmit" :validation-schema="schema">
+        <Field type="hidden" name="remember" value="true" />
         <div class="-space-y-px rounded-md shadow-sm">
           <div>
             <label for="email-address" class="sr-only">Email address</label>
-            <input
-              id="email-address"
+            <Field
               name="email"
               type="email"
-              autocomplete="email"
-              required
+              v-model="user.email"
               class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-              placeholder="Email address"
+              placeholder="Enter email.."
             />
+            <ErrorMessage name="email" class="text-red-600 text-sm" />
           </div>
           <div>
             <label for="password" class="sr-only">Password</label>
-            <input
-              id="password"
+            <Field
               name="password"
               type="password"
-              autocomplete="current-password"
-              required
+              v-model="user.password"
               class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-              placeholder="Password"
+              placeholder="password"
             />
+            <ErrorMessage name="password" class="text-red-600 text-sm" />
           </div>
         </div>
 
         <div class="flex items-center justify-between">
           <div class="flex items-center">
-            <input
-              id="remember-me"
-              name="remember-me"
+            <Field
+              name="rememberMe"
               type="checkbox"
               class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
             />
-            <label for="remember-me" class="ml-2 block text-sm text-gray-900"
+            <label for="rememberMe" class="ml-2 block text-sm text-gray-900"
               >Remember me</label
             >
           </div>
@@ -65,7 +61,7 @@
             >
           </div>
         </div>
-        <!-- added today -->
+        <!-- Added today -->
         <div>
           <button
             type="submit"
@@ -87,28 +83,7 @@
                 />
               </svg>
             </span>
-            <div class="">
-              <!-- Component starts here -->
-              <a
-                class="group max-w-max relative mx-1 flex flex-col items-center justify-center p-1 text-white"
-                href="#"
-              >
-                <!-- Text/Icon goes here -->
-                <p class="text-xs text-center">Login</p>
-                <!-- Tooltip here -->
-                <div
-                  class="[transform:perspective(50px)_translateZ(0)_rotateX(10deg)] group-hover:[transform:perspective(0px)_translateZ(0)_rotateX(0deg)] absolute bottom-0 mb-6 origin-bottom rounded text-white opacity-0 transition-all duration-300 group-hover:opacity-100"
-                >
-                  <div class="flex max-w-xs flex-col items-center">
-                    <div class="rounded bg-gray-900 p-2 text-xs text-center shadow-lg">
-                      Login
-                    </div>
-                    <div class="clip-bottom h-2 w-4 bg-gray-900"></div>
-                  </div>
-                </div>
-              </a>
-              <!-- Component ends here -->
-            </div>
+            login
           </button>
         </div>
         <div>
@@ -133,49 +108,36 @@
                   />
                 </svg>
               </span>
-
-              <div class="">
-                <!-- Component starts here -->
-                <a
-                  class="group max-w-max relative mx-1 flex flex-col items-center justify-center p-1 text-white"
-                  href="#"
-                >
-                  <!-- Text/Icon goes here -->
-                  <p class="text-xs text-center">Sign in</p>
-                  <!-- Tooltip here -->
-                  <div
-                    class="[transform:perspective(50px)_translateZ(0)_rotateX(10deg)] group-hover:[transform:perspective(0px)_translateZ(0)_rotateX(0deg)] absolute bottom-0 mb-6 origin-bottom rounded text-white opacity-0 transition-all duration-300 group-hover:opacity-100"
-                  >
-                    <div class="flex max-w-xs flex-col items-center">
-                      <div class="rounded bg-gray-900 p-2 text-xs text-center shadow-lg">
-                        Sign in
-                      </div>
-                      <div class="clip-bottom h-2 w-4 bg-gray-900"></div>
-                    </div>
-                  </div>
-                </a>
-                <!-- Component ends here -->
-              </div>
+              SignUp
             </button>
           </nuxt-link>
         </div>
-      </form>
+      </Form>
     </div>
   </div>
 </template>
+<script setup>
+import { Form, Field, ErrorMessage } from "vee-validate";
+import * as yup from "yup";
+import { useLoginStore } from "~~/composables/loginStore";
+const loginUser = useLoginStore();
 
-<script>
-/* import { useStore } from '../store/storeA' */
-export default {
-  /* setup() {
-    const store = useStore()
+let user = ref({
+  email: "",
+  password: "",
+});
 
-    return { store }
-  }, */
-};
-</script>
-<style>
-.clip-bottom {
-  clip-path: polygon(100% 50%, 0 0, 100% 0, 50% 100%, 0 0);
+const schema = yup.object({
+  email: yup.string().required().email(),
+  password: yup.string().required().min(8),
+  rememberMe: yup.boolean(),
+});
+function onSubmit() {
+  let results = JSON.stringify(user.value);
+  console.log(results);
+  loginUser.create(results);
 }
-</style>
+onMounted(() => {});
+</script>
+
+<style></style>

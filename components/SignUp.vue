@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
-  >
+  <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
     <div class="w-full max-w-md space-y-8">
       <div>
         <img
@@ -9,76 +7,67 @@
           src="../assets/images/catoon.png"
           alt="Your Company"
         />
-        <h2
-          class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900"
-        >
+        <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
           Sign up into your account
         </h2>
         <p class="mt-2 text-center text-sm text-gray-600">
-          And
           <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500"
             >Welcome</a
           >
         </p>
       </div>
-      <form class="mt-8 space-y-6" action="#" method="POST">
-        <input type="hidden" name="remember" value="true" />
+      <Form class="mt-8 space-y-6" @submit="onSubmit" :validation-schema="schema">
+        <Field type="hidden" name="remember" value="true" />
         <div class="-space-y-px rounded-md shadow-sm">
           <div>
             <label for="email-address" class="sr-only">Email address</label>
-            <input
-              id="email-address"
+            <Field
               name="email"
               type="email"
-              autocomplete="email"
-              required
+              v-model="user.email"
               class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-              placeholder="Email address"
+              placeholder="Enter email.."
             />
+            <ErrorMessage name="email" class="text-red-600 text-sm" />
           </div>
           <div>
             <label for="password" class="sr-only">Password</label>
-            <input
-              id="password"
+            <Field
               name="password"
               type="password"
-              autocomplete="current-password"
-              required
+              v-model="user.password"
               class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-              placeholder="Password"
+              placeholder="password"
             />
+            <ErrorMessage name="password" class="text-red-600 text-sm" />
           </div>
           <div>
-            <label for="Repeat password" class="sr-only">Repeat Password</label>
-            <input
-              id="Repeat password"
-              name="Repeat password"
+            <label for="repeatPassword" class="sr-only">Repeat Password</label>
+            <Field
+              name="repeatPassword"
+              v-model="user.repeatPassword"
               type="password"
-              autocomplete="current-password"
-              required
               class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-              placeholder="Repeat Password"
+              placeholder="confirm password"
             />
+            <ErrorMessage name="repeatPassword" class="text-red-600 text-sm" />
           </div>
         </div>
 
         <div class="flex items-center justify-between">
           <div class="flex items-center">
-            <input
-              id="remember-me"
-              name="remember-me"
+            <Field
+              name="rememberMe"
               type="checkbox"
               class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
             />
-            <label for="remember-me" class="ml-2 block text-sm text-gray-900"
+            <label for="rememberMe" class="ml-2 block text-sm text-gray-900"
               >Remember me</label
             >
           </div>
 
           <div class="text-sm">
-            <a
-              href="#"
-              class="font-medium text-indigo-600 hover:text-indigo-500"
+            <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500"
               >Forgot your password?</a
             >
           </div>
@@ -134,13 +123,34 @@
             </button>
           </nuxt-link>
         </div>
-      </form>
+      </Form>
     </div>
   </div>
 </template>
+<script setup>
+import { Form, Field, ErrorMessage } from "vee-validate";
+import * as yup from "yup";
+import { useRegisterStore } from "~~/composables/registerStore";
+const registerStore = useRegisterStore();
 
-<script>
-export default {};
+let user = ref({
+  email: "",
+  password: "",
+  repeatPassword: "",
+});
+
+const schema = yup.object({
+  email: yup.string().required().email(),
+  password: yup.string().required().min(8),
+  repeatPassword: yup.string().required().min(8),
+  rememberMe: yup.boolean(),
+});
+function onSubmit() {
+  let results = JSON.stringify(user.value);
+  console.log(results);
+  registerStore.create(results);
+}
+onMounted(() => {});
 </script>
 
 <style></style>

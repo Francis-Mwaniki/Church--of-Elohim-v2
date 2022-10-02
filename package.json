@@ -16,10 +16,24 @@
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/vue-fontawesome": "^3.0.1",
+    "@headlessui/vue": "^1.7.1",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/fontawesome": "^1.1.2",
+    "@nuxtjs/tailwindcss": "^5.3.3",
     "@pinia/nuxt": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.3",
+    "@types/bcryptjs": "^2.4.2",
+    "@vee-validate/rules": "^4.6.7",
+    "bcryptjs": "^2.4.3",
+    "dayjs": "^1.11.5",
+    "dotenv": "^16.0.2",
+    "joi": "^17.6.0",
+    "mongoose": "^6.6.1",
     "nuxt-fontawesome": "^0.4.0",
-    "pinia": "^2.0.22"
+    "nuxt-icon": "^0.1.6",
+    "pinia": "^2.0.22",
+    "vee-validate": "^4.6.7",
+    "vue-toastification": "next",
+    "yup": "^0.32.11"
   }
 }

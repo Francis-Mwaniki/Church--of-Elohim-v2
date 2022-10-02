@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     },
   },
   runtimeConfig: {
-    API_KEY: process.env.API_KEY,
+    MONGO_URL: process.env.MONGO_URL,
   },
 
   css: [
@@ -27,13 +27,21 @@ export default defineNuxtConfig({
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
+    "@nuxtjs/tailwindcss",
+    "nuxt-icon",
     "@pinia/nuxt",
   ],
-  loading: "~/components/loadingBar.vue",
   loadingIndicator: {
     name: "circle",
     color: "#3B8070",
     background: "white",
+  },
+  //Register nitro plugin
+  nitro: {
+    plugins: ["@/server/db/index.js"],
+  },
+  build: {
+    transpile: ["vue-toastification"],
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
