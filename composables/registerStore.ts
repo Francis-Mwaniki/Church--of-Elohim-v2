@@ -1,4 +1,5 @@
 import { defineStore } from "pinia";
+import { ToastContent } from "vue-toastification/dist/types/types";
 import { Iuser } from "~~/types";
 import useToast from "./useToast";
 export const useRegisterStore = defineStore("register-store", {
@@ -12,13 +13,13 @@ export const useRegisterStore = defineStore("register-store", {
         method: "POST",
         body: user,
       })
-        .catch((err) => {
+        .catch((err: { data: { message: ToastContent } }) => {
           useToast().error(err.data.message);
         })
-        .then(async (res) => {
+        .then(async (res: { message: any }) => {
           let successMsg = "signed in successfully";
           let msg = await res.message;
-          if (msg == successMsg) return useToast().success(successMsg);
+          if (msg == successMsg) return useToast().success(msg);
           useToast().error(msg);
         });
     },
