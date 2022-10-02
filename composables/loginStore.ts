@@ -13,13 +13,15 @@ export const useLoginStore = defineStore("login-store", {
         method: "POST",
         body: user,
       })
+        //err.data.message
         .catch((err: { data: { message: ToastContent } }) => {
-          useToast().error(err.data.message);
+          useToast().error("error");
         })
         .then(async (res: { message: any }) => {
           let successMsg = "logged in successfully";
           let msg = await res.message;
-          if (msg == successMsg) return useToast().success(msg);
+          if (msg == successMsg)
+            return useToast().success("logged in successfully");
           useToast().error(msg);
         });
     },

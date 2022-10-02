@@ -13,13 +13,14 @@ export const useRegisterStore = defineStore("register-store", {
         method: "POST",
         body: user,
       })
+        //err.data.message
         .catch((err: { data: { message: ToastContent } }) => {
-          useToast().error(err.data.message);
+          useToast().error("something went wrong");
         })
         .then(async (res: { message: any }) => {
           let successMsg = "signed in successfully";
           let msg = await res.message;
-          if (msg == successMsg) return useToast().success(msg);
+          if (msg == successMsg) return useToast().success("registered");
           useToast().error(msg);
         });
     },
