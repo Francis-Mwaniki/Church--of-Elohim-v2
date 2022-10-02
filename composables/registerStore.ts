@@ -15,7 +15,7 @@ export const useRegisterStore = defineStore("register-store", {
       })
         //err.data.message
         .catch((err: { data: { message: ToastContent } }) => {
-          useToast().error("something went wrong");
+          useToast().error("Coming soon");
         })
         .then(async (res: { message: any }) => {
           let successMsg = "signed in successfully";

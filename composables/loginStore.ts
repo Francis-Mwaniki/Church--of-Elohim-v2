@@ -15,7 +15,7 @@ export const useLoginStore = defineStore("login-store", {
       })
         //err.data.message
         .catch((err: { data: { message: ToastContent } }) => {
-          useToast().error("error");
+          useToast().error("coming soon");
         })
         .then(async (res: { message: any }) => {
           let successMsg = "logged in successfully";
