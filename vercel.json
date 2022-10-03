@@ -8,6 +8,14 @@
     {
       "src": "/api/login/create",
       "dest": "/api/login/create.post.js"
+    },
+    {
+      "src": "/sw.js",
+      "continue": true,
+      "headers": {
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Service-Worker-Allowed": "/"
+      }
     }
   ],
   "builds": [
