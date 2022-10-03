@@ -20,6 +20,7 @@
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/fontawesome": "^1.1.2",
     "@nuxtjs/tailwindcss": "^5.3.3",
+    "@nuxtjs/vercel-builder": "^0.22.1",
     "@pinia/nuxt": "^0.4.2",
     "@tailwindcss/forms": "^0.5.3",
     "@types/bcryptjs": "^2.4.2",
