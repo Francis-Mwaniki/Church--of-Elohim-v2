@@ -10,9 +10,6 @@
   },
   "devDependencies": {
     "nuxt": "3.0.0-rc.9",
-    "tailwindcss": "^3.1.8"
-  },
-  "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
@@ -35,6 +32,8 @@
     "pinia": "^2.0.22",
     "vee-validate": "^4.6.7",
     "vue-toastification": "next",
-    "yup": "^0.32.11"
-  }
+    "yup": "^0.32.11",
+    "tailwindcss": "^3.1.8"
+  },
+  "dependencies": {}
 }

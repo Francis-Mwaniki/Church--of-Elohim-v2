@@ -13,7 +13,6 @@ export const useRegisterStore = defineStore("register-store", {
         method: "POST",
         body: user,
       })
-        //err.data.message
         .catch((err: { data: { message: ToastContent } }) => {
           useToast().error(err.data.message);
         })
