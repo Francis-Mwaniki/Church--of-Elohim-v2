@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 export default defineNitroConfig((nitroApp) => {
   /*const config = useRuntimeConfig();  */
   //connect to mongoose
-  const config = dotenv.config();
+  dotenv.config();
   mongoose
     .connect(process.env.MONGO_URL)
     .then((res) => {

@@ -15,6 +15,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     MONGO_URL: process.env.MONGO_URL,
   },
+  generate: {
+    routes: ["/api/register/create", "/api/login/create"],
+  },
 
   css: [
     "~/assets/css/main.css",
