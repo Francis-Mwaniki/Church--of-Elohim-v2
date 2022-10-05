@@ -10,7 +10,8 @@
   },
   "engines": {
     "node": "16.17.1",
-    "yarn": "1.22.5"
+    "yarn": "1.22.5",
+    "npm ": "8.19.2"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^5.3.3",
