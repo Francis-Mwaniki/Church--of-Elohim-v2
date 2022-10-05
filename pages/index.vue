@@ -9,3 +9,4 @@ export default {
   components: { Hero1 },
 };
 </script>
+//
