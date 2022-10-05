@@ -13,8 +13,8 @@
     "yarn": "1.22.5"
   },
   "devDependencies": {
-    "nuxt": "3.0.0-rc.9",
-    "@nuxtjs/tailwindcss": "^5.3.3"
+    "@nuxtjs/tailwindcss": "^5.3.3",
+    "nuxt": "3.0.0-rc.9"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
@@ -27,18 +27,21 @@
     "@pinia/nuxt": "^0.4.2",
     "@tailwindcss/forms": "^0.5.3",
     "@types/bcryptjs": "^2.4.2",
+    "@types/readable-stream": "^2.3.14",
     "@vee-validate/rules": "^4.6.7",
     "bcryptjs": "^2.4.3",
     "dayjs": "^1.11.5",
     "dotenv": "^16.0.2",
     "joi": "^17.6.0",
+    "lazystream": "^1.0.1",
     "mongoose": "^6.6.1",
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-icon": "^0.1.6",
     "pinia": "^2.0.22",
+    "readable-stream": "^4.2.0",
+    "tailwindcss": "^3.1.8",
     "vee-validate": "^4.6.7",
     "vue-toastification": "next",
-    "yup": "^0.32.11",
-    "tailwindcss": "^3.1.8"
+    "yup": "^0.32.11"
   }
 }
