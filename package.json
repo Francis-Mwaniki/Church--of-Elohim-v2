@@ -10,7 +10,7 @@
   },
   "engines": {
     "node": "16.17.1",
-    "yarn": "1.22.19"
+    "yarn": "1.22.15"
   },
   "devDependencies": {
     "nuxt": "3.0.0-rc.9",
